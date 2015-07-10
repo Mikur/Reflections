@@ -1,0 +1,4 @@
+git diff commitid1 commitid2
+diff -u file1 file2
+git log
+git checkout commitid

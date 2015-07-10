@@ -1,0 +1,25 @@
+git init -> create .git file (repository)
+git status -> see which files are in staging area and which aren't/see modified files
+git add -> add files to staging area
+git reset #filename# -> remove files from staging area/remove #filename#
+git commit -> commit staging area files, will open up sublime text to set commit text
+git reset --hard -> reset the files in working directory/staging area to those in repository
+git diff -> changes between staging area and working directory
+git diff id1 id2 -> changes between two commits
+git diff --staged -> changes between staging area and most recent commit
+git checkout master -> go back to master branch
+git branch -> see branches
+git branch branchname -> create a branch of "branchname"
+git log --graph --oneline branch1 branch2 -> see logs of both branches, oneline easier to read
+git checkout -b new_branch_name -> like saying "git branch new_branch_name"/"git checkout 		new_branch_name", will create a new branch on the commit currently editing so save it
+git merge branch1 branch2 -> merge branch2 into branch1
+git merge branch2 -> merge branch2 into the current branch
+git merge --abort -> if merge has conflict, abort and fix errors
+git show commit_id -> compare commit to its parent
+git branch -d branch_name -> delete branch_name branch
+
+
+AFTER MERGE CONFLICT, subl filename -> will show changes between files, <<<<HEAD is what is in 	the current branch, ==== >>>>master is what is in master branch, |||||| is original file
+
+
+MERGING: if lines are deleted, will not be in final file, if lines are added, will be in final file.  Want to merge a branch into the master branch, then delete the other branch, commits will all be there and in order by time created.  Always checkout one of the branches you want to merge, or else 2 branches will merge into the current branch, effectively merging 3 branches.
