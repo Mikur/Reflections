@@ -1,0 +1,32 @@
+git remote -> view current remotes
+git remote add [name] [https url]-> add repository on github as a remote of 	[name] 	(default origin if only have one remote)
+git remote -v -> v is verbose
+git push remote_name branch_name -> push takes 2 arguments: remote name and 
+	branch to push
+git pull remote_name branch_name -> pull from remote repository to local
+	repository, updating local computer files
+git clone clone_url -> clones the github repository to local computer
+git branch -a -> more information on branches
+git fetch remote_name -> updates local repository with remote repository by 	adding to origin/master branch, but does not merge with the local 	master branch yet
+
+PUSHING:  Github will not update files not changed, to be more efficient.  Pushing only pushes the branch and its commits.
+
+FORKING:  Cloning a repository onto your own account on github, so they are connected and gives original owner credit as well.  We clone github repositories onto local computers, but fork feature is on github servers.
+Origin remote will point to the forked repository, can set up "upstream" remote to point to the original repository.
+
+CLONING: Use when creating new repositories.  Pull is for updating local repository.  Automatically sets github repository to remote.
+
+CONFLICTS:  Github will automatically merge
+	git pull origin master = git fetch origin
+				 git merge master origin/master
+	Sometimes, if you make a change on another branch, then make a pull 
+	request, it won't merge with the original repository master branch 
+	because someone else updated it.  So need to create a remote to the
+	original repository, update on local computer the upstream remote 
+	(git pull upstream master), merge upstream/master with branch_name,
+	then push the branch_name branch to the fork, which will update
+	the pull request with updated upstream/master branch, so github can
+	merge automatically your branch to the original master branch.  Make
+	sure when creating remote upstream, use the link of the original repo
+
+PULL REQUEST: A merge request, ask author to merge a branch with the master or something.  Say if there is a typo, make another commit to fix the typo, then push the branch will automatically update the pull request.
